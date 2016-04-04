@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <!--<script src="../bower_components/jquery/dist/jquery.js"> </script> -->
+    <script>
+      window.$ = window.jQuery = require('../bower_components/jquery/dist/jquery.js');
+    </script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    We are using node <script>document.write(process.versions.node)</script>,
+    Chrome <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+    <script>
+      var fs = require('fs');
+      var file = fs.readFileSync(__dirname + '/package.json'); 
+      document.write(file); 
+    </script>
+  </body>
+</html>

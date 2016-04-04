@@ -1,0 +1,23 @@
+{
+  "name": "skeleton",
+  "authors": [
+    "Heejune Kim <heejune@gmail.com>"
+  ],
+  "description": "minimal electron app",
+  "main": "main.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular-material": "^1.0.6",
+    "jquery": "^2.2.2"
+  }
+}

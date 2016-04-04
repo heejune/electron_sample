@@ -1,0 +1,74 @@
+
+* references
+
+** sound-machine
+https://github.com/bojzi/sound-machine-electron-guide/blob/master/package.json
+
+** Building a desktop application with Electron
+https://medium.com/developers-writing/building-a-desktop-application-with-electron-204203eeb658#.i0vcenl7u
+
+** distribution
+electron official
+https://github.com/atom/electron/blob/master/docs/tutorial/application-distribution.md
+
+** electron master doc
+https://github.com/atom/electron/tree/master/docs
+
+** Electron official quick start
+http://electron.atom.io/docs/latest/tutorial/quick-start/
+
+** Electron official doc
+http://electron.atom.io/docs/v0.37.2/
+
+** libchromiumcontent
+https://github.com/atom/libchromiumcontent
+
+** NW.js
+https://github.com/nwjs/nw.js
+
+** chromium developer page
+http://www.chromium.org/developers
+
+** chromium design document
+https://www.chromium.org/developers/design-documents
+
+*** How Chromium Displays Web Pages
+https://www.chromium.org/developers/design-documents/displaying-a-web-page-in-chrome
+
+*** Multi-process Architecture
+https://www.chromium.org/developers/design-documents/multi-process-architecture
+
+** cef
+https://bitbucket.org/chromiumembedded/cef/wiki/Home
+
+** Bracket
+
+*** CEF3 vs. Chromium Content Shell
+https://github.com/adobe/brackets/wiki/CEF3-vs.-Chromium-Content-Shell
+
+*** Bracket-shell: Architectural Overview
+https://github.com/adobe/brackets-shell/wiki/Architectural-Overview
+
+
+** samples
+https://scotch.io/tutorials/creating-desktop-applications-with-angularjs-and-github-electron
+
+** 패키징과 배포
+https://github.com/atom/electron/blob/master/docs/tutorial/application-distribution.md#packaging-your-app-into-a-file
+
+* Commands
+** electron-prebuilt 설치
+# Install the `electron` command globally in your $PATH
+npm install electron-prebuilt -g
+
+# Install as a development dependency
+npm install electron-prebuilt --save-dev
+
+* how to load binary 
+
+#+BEGIN_SRC js
+    var oReq = new XMLHttpRequest();
+    var param = '?id=' + id;
+    oReq.open("GET", "yourCustomScheme://localresource/loadFile" + param, true);
+    oReq.responseType = "blob";
+#+END_SRC

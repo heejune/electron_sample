@@ -1,0 +1,11 @@
+{
+  "name": "FileUploader",
+  "description": "File Browse and Upload App",
+  "version": "0.0.1",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "copy&paste",
+  "license": "ISC"
+}

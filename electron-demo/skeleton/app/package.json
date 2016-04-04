@@ -1,0 +1,8 @@
+{
+  "name": "demo_app",
+  "description": "Minimal skeleton demo app",
+  "version": "0.0.1",
+  "main": "./main.js",
+  "author": "",
+  "license": "ISC"
+}

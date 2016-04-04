@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html,
+      body {
+      -webkit-app-region: drag;
+      -webkit-user-select: none;
+      }
+
+      .nodrag {
+      -webkit-app-region: no-drag;
+      }
+
+      button {
+      -webkit-app-region: no-drag;
+      }
+    </style>
+    <script src="../bower_components/jquery/dist/jquery.js"> </script>
+    <script type="application/javascript">
+      if (typeof module === 'object' && typeof module.exports !== 'undefined') {
+        window.$ = window.jQuery = module.exports;
+      }
+    </script>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css"
+          rel="stylesheet" type="text/css"/>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.css"
+          rel="stylesheet" type="text/css"/>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+  </head>
+  <body>
+    <div class="container" ng-app="electronApp" ng-controller="configCtrl">
+      <div class="row">
+        <button class="btn btn-default close button" type="button" ng-click="closeWin()">Close</button>
+      </div>
+    <h3>Preference Window </h3>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" name="name" ng-model="target.name"
+                   class="form-control nodrag" >
+            <span class="input-group-btn">
+              <button class="btn btn-default" ng-click="test()">Go!</button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
+    </div> <!-- container -->
+    <script src="prefwin.js"> </script>
+  </body>
+</html>
