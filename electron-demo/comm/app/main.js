@@ -13,8 +13,6 @@ const BrowserWindow = electron.BrowserWindow;
 
 var ipcMain = require('electron').ipcMain;
 
-var fs = require('fs'); // To read the directory listing
-
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
@@ -69,7 +67,10 @@ ipcMain.on('openPreference', function() {
 
 ipcMain.on('setNameRequest', function(event, arg){
   console.log('main.js - Browser IPC handler: param = ' + arg);
+  console.log('main.js - Browser IPC handler: global.sharedObject.targetPath = ' + global.sharedObject.targetPath);
   if (mainWindow) {
+    arg += ' [arg reply]';
+    global.sharedObject.targetPath += ' [global.sharedObject reply]';
     mainWindow.webContents.send('setNameRequestCallback', arg);
   }
 });
